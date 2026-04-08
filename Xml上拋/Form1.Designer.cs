@@ -62,6 +62,8 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
             this.HandlerLog_label = new System.Windows.Forms.Label();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
@@ -83,8 +85,10 @@
             this.textBox_j750_summary_FTP = new System.Windows.Forms.TextBox();
             this.textBox_barcode_backup_FTP = new System.Windows.Forms.TextBox();
             this.button7 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.textBox_750Ftp = new System.Windows.Forms.TextBox();
+            this.textBox_750Account = new System.Windows.Forms.TextBox();
+            this.textBox_750Password = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -98,6 +102,7 @@
             this.groupBox6.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -116,7 +121,7 @@
             this.textBox1.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.textBox1.Location = new System.Drawing.Point(87, 3);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(191, 27);
+            this.textBox1.Size = new System.Drawing.Size(191, 23);
             this.textBox1.TabIndex = 1;
             // 
             // label1
@@ -125,7 +130,7 @@
             this.label1.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label1.Location = new System.Drawing.Point(2, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 19);
+            this.label1.Size = new System.Drawing.Size(55, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "機台名稱";
             // 
@@ -135,7 +140,7 @@
             this.label2.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label2.Location = new System.Drawing.Point(314, 3);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 19);
+            this.label2.Size = new System.Drawing.Size(43, 16);
             this.label2.TabIndex = 3;
             this.label2.Text = "狀態欄";
             // 
@@ -154,7 +159,7 @@
             this.textBox2.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.textBox2.Location = new System.Drawing.Point(504, 310);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(71, 27);
+            this.textBox2.Size = new System.Drawing.Size(71, 23);
             this.textBox2.TabIndex = 7;
             // 
             // textBox3
@@ -162,7 +167,7 @@
             this.textBox3.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.textBox3.Location = new System.Drawing.Point(504, 349);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(71, 27);
+            this.textBox3.Size = new System.Drawing.Size(71, 23);
             this.textBox3.TabIndex = 8;
             // 
             // textBox4
@@ -170,7 +175,7 @@
             this.textBox4.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.textBox4.Location = new System.Drawing.Point(581, 310);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(109, 27);
+            this.textBox4.Size = new System.Drawing.Size(109, 23);
             this.textBox4.TabIndex = 9;
             // 
             // textBox5
@@ -178,14 +183,14 @@
             this.textBox5.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.textBox5.Location = new System.Drawing.Point(581, 349);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(109, 27);
+            this.textBox5.Size = new System.Drawing.Size(109, 23);
             this.textBox5.TabIndex = 10;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.textBox6);
             this.groupBox1.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 511);
+            this.groupBox1.Location = new System.Drawing.Point(668, 143);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(179, 82);
             this.groupBox1.TabIndex = 12;
@@ -196,7 +201,7 @@
             // 
             this.textBox6.Location = new System.Drawing.Point(20, 30);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(135, 27);
+            this.textBox6.Size = new System.Drawing.Size(135, 23);
             this.textBox6.TabIndex = 12;
             // 
             // LBC_checkBox
@@ -207,7 +212,7 @@
             this.LBC_checkBox.Location = new System.Drawing.Point(5, 105);
             this.LBC_checkBox.Margin = new System.Windows.Forms.Padding(4);
             this.LBC_checkBox.Name = "LBC_checkBox";
-            this.LBC_checkBox.Size = new System.Drawing.Size(116, 26);
+            this.LBC_checkBox.Size = new System.Drawing.Size(94, 21);
             this.LBC_checkBox.TabIndex = 14;
             this.LBC_checkBox.Text = "LBC1,LBC2";
             this.LBC_checkBox.UseVisualStyleBackColor = true;
@@ -217,7 +222,7 @@
             this.RTBin_textBox.Location = new System.Drawing.Point(135, 158);
             this.RTBin_textBox.Margin = new System.Windows.Forms.Padding(4);
             this.RTBin_textBox.Name = "RTBin_textBox";
-            this.RTBin_textBox.Size = new System.Drawing.Size(73, 29);
+            this.RTBin_textBox.Size = new System.Drawing.Size(73, 25);
             this.RTBin_textBox.TabIndex = 15;
             this.RTBin_textBox.Text = "2";
             // 
@@ -225,7 +230,7 @@
             // 
             this.RT_Frequency_textBox.Location = new System.Drawing.Point(135, 190);
             this.RT_Frequency_textBox.Name = "RT_Frequency_textBox";
-            this.RT_Frequency_textBox.Size = new System.Drawing.Size(73, 29);
+            this.RT_Frequency_textBox.Size = new System.Drawing.Size(73, 25);
             this.RT_Frequency_textBox.TabIndex = 18;
             this.RT_Frequency_textBox.Text = "3,4";
             // 
@@ -236,7 +241,7 @@
             this.RRT_checkBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.RRT_checkBox.Location = new System.Drawing.Point(5, 133);
             this.RRT_checkBox.Name = "RRT_checkBox";
-            this.RRT_checkBox.Size = new System.Drawing.Size(102, 26);
+            this.RRT_checkBox.Size = new System.Drawing.Size(78, 21);
             this.RRT_checkBox.TabIndex = 19;
             this.RRT_checkBox.Text = "RRT_flag";
             this.RRT_checkBox.UseVisualStyleBackColor = true;
@@ -248,7 +253,7 @@
             this.RTBin_checkBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.RTBin_checkBox.Location = new System.Drawing.Point(5, 161);
             this.RTBin_checkBox.Name = "RTBin_checkBox";
-            this.RTBin_checkBox.Size = new System.Drawing.Size(81, 26);
+            this.RTBin_checkBox.Size = new System.Drawing.Size(64, 21);
             this.RTBin_checkBox.TabIndex = 20;
             this.RTBin_checkBox.Text = "RT Bin";
             this.RTBin_checkBox.UseVisualStyleBackColor = true;
@@ -260,7 +265,7 @@
             this.RT_Frequency_checkBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.RT_Frequency_checkBox.Location = new System.Drawing.Point(5, 189);
             this.RT_Frequency_checkBox.Name = "RT_Frequency_checkBox";
-            this.RT_Frequency_checkBox.Size = new System.Drawing.Size(91, 26);
+            this.RT_Frequency_checkBox.Size = new System.Drawing.Size(71, 21);
             this.RT_Frequency_checkBox.TabIndex = 21;
             this.RT_Frequency_checkBox.Text = "RT 次數";
             this.RT_Frequency_checkBox.UseVisualStyleBackColor = true;
@@ -292,10 +297,10 @@
             this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.RTBin_textBox);
             this.tabPage1.Controls.Add(this.LBC_checkBox);
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Location = new System.Drawing.Point(4, 26);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(497, 228);
+            this.tabPage1.Size = new System.Drawing.Size(497, 231);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Xml上拋";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -307,7 +312,7 @@
             this.checkBox_FTP.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox_FTP.Location = new System.Drawing.Point(167, 105);
             this.checkBox_FTP.Name = "checkBox_FTP";
-            this.checkBox_FTP.Size = new System.Drawing.Size(61, 26);
+            this.checkBox_FTP.Size = new System.Drawing.Size(49, 21);
             this.checkBox_FTP.TabIndex = 22;
             this.checkBox_FTP.Text = "FTP";
             this.checkBox_FTP.UseVisualStyleBackColor = true;
@@ -318,10 +323,10 @@
             this.tabPage2.Controls.Add(this.button3);
             this.tabPage2.Controls.Add(this.groupBox3);
             this.tabPage2.Controls.Add(this.groupBox2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Location = new System.Drawing.Point(4, 26);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(497, 228);
+            this.tabPage2.Size = new System.Drawing.Size(497, 231);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = ".Sum下載";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -372,7 +377,7 @@
             "FT5"});
             this.FT_Station_comboBox.Location = new System.Drawing.Point(5, 21);
             this.FT_Station_comboBox.Name = "FT_Station_comboBox";
-            this.FT_Station_comboBox.Size = new System.Drawing.Size(121, 31);
+            this.FT_Station_comboBox.Size = new System.Drawing.Size(121, 27);
             this.FT_Station_comboBox.TabIndex = 2;
             this.FT_Station_comboBox.Text = "FT1";
             // 
@@ -394,7 +399,7 @@
             this.RN_textBox.Location = new System.Drawing.Point(0, 21);
             this.RN_textBox.Margin = new System.Windows.Forms.Padding(2);
             this.RN_textBox.Name = "RN_textBox";
-            this.RN_textBox.Size = new System.Drawing.Size(283, 32);
+            this.RN_textBox.Size = new System.Drawing.Size(283, 27);
             this.RN_textBox.TabIndex = 7;
             // 
             // tabPage4
@@ -402,10 +407,10 @@
             this.tabPage4.Controls.Add(this.groupBox7);
             this.tabPage4.Controls.Add(this.button8);
             this.tabPage4.Controls.Add(this.button9);
-            this.tabPage4.Location = new System.Drawing.Point(4, 29);
+            this.tabPage4.Location = new System.Drawing.Point(4, 26);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(497, 228);
+            this.tabPage4.Size = new System.Drawing.Size(497, 231);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Xml_Reader";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -426,7 +431,7 @@
             this.Xml_OutTest_radioButton.AutoSize = true;
             this.Xml_OutTest_radioButton.Location = new System.Drawing.Point(18, 51);
             this.Xml_OutTest_radioButton.Name = "Xml_OutTest_radioButton";
-            this.Xml_OutTest_radioButton.Size = new System.Drawing.Size(116, 26);
+            this.Xml_OutTest_radioButton.Size = new System.Drawing.Size(91, 21);
             this.Xml_OutTest_radioButton.TabIndex = 1;
             this.Xml_OutTest_radioButton.Text = "委測需求單";
             this.Xml_OutTest_radioButton.UseVisualStyleBackColor = true;
@@ -437,7 +442,7 @@
             this.Xml_SECN_radioButton.Checked = true;
             this.Xml_SECN_radioButton.Location = new System.Drawing.Point(18, 24);
             this.Xml_SECN_radioButton.Name = "Xml_SECN_radioButton";
-            this.Xml_SECN_radioButton.Size = new System.Drawing.Size(75, 26);
+            this.Xml_SECN_radioButton.Size = new System.Drawing.Size(59, 21);
             this.Xml_SECN_radioButton.TabIndex = 0;
             this.Xml_SECN_radioButton.TabStop = true;
             this.Xml_SECN_radioButton.Text = "SECN";
@@ -471,13 +476,35 @@
             this.tabPage5.Controls.Add(this.HandlerLog_label);
             this.tabPage5.Controls.Add(this.button10);
             this.tabPage5.Controls.Add(this.button11);
-            this.tabPage5.Location = new System.Drawing.Point(4, 29);
+            this.tabPage5.Location = new System.Drawing.Point(4, 26);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(497, 228);
+            this.tabPage5.Size = new System.Drawing.Size(497, 231);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "HandlerLog分析";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // button13
+            // 
+            this.button13.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button13.Location = new System.Drawing.Point(13, 137);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(228, 50);
+            this.button13.TabIndex = 11;
+            this.button13.Text = "兩份檔案彙整";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // button12
+            // 
+            this.button12.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button12.Location = new System.Drawing.Point(13, 81);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(228, 50);
+            this.button12.TabIndex = 10;
+            this.button12.Text = "STDF_CSV彙整";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // HandlerLog_label
             // 
@@ -485,7 +512,7 @@
             this.HandlerLog_label.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.HandlerLog_label.Location = new System.Drawing.Point(12, 3);
             this.HandlerLog_label.Name = "HandlerLog_label";
-            this.HandlerLog_label.Size = new System.Drawing.Size(54, 19);
+            this.HandlerLog_label.Size = new System.Drawing.Size(43, 16);
             this.HandlerLog_label.TabIndex = 9;
             this.HandlerLog_label.Text = "狀態欄";
             // 
@@ -520,9 +547,9 @@
             this.tabPage3.Controls.Add(this.label3);
             this.tabPage3.Controls.Add(this.groupBox6);
             this.tabPage3.Controls.Add(this.button5);
-            this.tabPage3.Location = new System.Drawing.Point(4, 29);
+            this.tabPage3.Location = new System.Drawing.Point(4, 26);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(497, 228);
+            this.tabPage3.Size = new System.Drawing.Size(497, 231);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "F278 Rename";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -541,7 +568,7 @@
             // 
             this.Tester_textBox.Location = new System.Drawing.Point(90, 117);
             this.Tester_textBox.Name = "Tester_textBox";
-            this.Tester_textBox.Size = new System.Drawing.Size(87, 29);
+            this.Tester_textBox.Size = new System.Drawing.Size(87, 25);
             this.Tester_textBox.TabIndex = 10;
             this.Tester_textBox.Text = "E750-15";
             // 
@@ -549,7 +576,7 @@
             // 
             this.DateCode_textBox.Location = new System.Drawing.Point(90, 82);
             this.DateCode_textBox.Name = "DateCode_textBox";
-            this.DateCode_textBox.Size = new System.Drawing.Size(87, 29);
+            this.DateCode_textBox.Size = new System.Drawing.Size(87, 25);
             this.DateCode_textBox.TabIndex = 9;
             this.DateCode_textBox.Text = "12345";
             // 
@@ -558,7 +585,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(18, 121);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 22);
+            this.label5.Size = new System.Drawing.Size(45, 17);
             this.label5.TabIndex = 8;
             this.label5.Text = "Tester";
             // 
@@ -567,7 +594,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(18, 86);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 22);
+            this.label4.Size = new System.Drawing.Size(69, 17);
             this.label4.TabIndex = 7;
             this.label4.Text = "DateCode";
             // 
@@ -577,7 +604,7 @@
             this.label3.Location = new System.Drawing.Point(13, 193);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(347, 22);
+            this.label3.Size = new System.Drawing.Size(266, 17);
             this.label3.TabIndex = 6;
             this.label3.Text = "※將待命名檔案放置於執行檔根目錄一次一個";
             // 
@@ -597,7 +624,7 @@
             this.radioButtonFT.Checked = true;
             this.radioButtonFT.Location = new System.Drawing.Point(6, 39);
             this.radioButtonFT.Name = "radioButtonFT";
-            this.radioButtonFT.Size = new System.Drawing.Size(50, 26);
+            this.radioButtonFT.Size = new System.Drawing.Size(40, 21);
             this.radioButtonFT.TabIndex = 1;
             this.radioButtonFT.TabStop = true;
             this.radioButtonFT.Text = "FT";
@@ -608,7 +635,7 @@
             this.radioButtonCP.AutoSize = true;
             this.radioButtonCP.Location = new System.Drawing.Point(6, 13);
             this.radioButtonCP.Name = "radioButtonCP";
-            this.radioButtonCP.Size = new System.Drawing.Size(52, 26);
+            this.radioButtonCP.Size = new System.Drawing.Size(43, 21);
             this.radioButtonCP.TabIndex = 0;
             this.radioButtonCP.Text = "CP";
             this.radioButtonCP.UseVisualStyleBackColor = true;
@@ -628,7 +655,7 @@
             // 
             this.groupBox4.Controls.Add(this.textBox_j750_summary);
             this.groupBox4.Controls.Add(this.textBox_barcode_backup);
-            this.groupBox4.Location = new System.Drawing.Point(12, 406);
+            this.groupBox4.Location = new System.Drawing.Point(668, 38);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(486, 99);
             this.groupBox4.TabIndex = 23;
@@ -640,7 +667,7 @@
             this.textBox_j750_summary.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.textBox_j750_summary.Location = new System.Drawing.Point(17, 18);
             this.textBox_j750_summary.Name = "textBox_j750_summary";
-            this.textBox_j750_summary.Size = new System.Drawing.Size(453, 27);
+            this.textBox_j750_summary.Size = new System.Drawing.Size(453, 23);
             this.textBox_j750_summary.TabIndex = 7;
             this.textBox_j750_summary.Text = "\\\\172.17.6.212\\j750_summary\\MTK_auto_load_E750\\";
             // 
@@ -649,7 +676,7 @@
             this.textBox_barcode_backup.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.textBox_barcode_backup.Location = new System.Drawing.Point(17, 57);
             this.textBox_barcode_backup.Name = "textBox_barcode_backup";
-            this.textBox_barcode_backup.Size = new System.Drawing.Size(453, 27);
+            this.textBox_barcode_backup.Size = new System.Drawing.Size(453, 23);
             this.textBox_barcode_backup.TabIndex = 8;
             this.textBox_barcode_backup.Text = "\\\\172.17.6.192\\barcode_backup\\750\\";
             // 
@@ -669,7 +696,7 @@
             this.textBox_j750_summary_FTP.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.textBox_j750_summary_FTP.Location = new System.Drawing.Point(17, 18);
             this.textBox_j750_summary_FTP.Name = "textBox_j750_summary_FTP";
-            this.textBox_j750_summary_FTP.Size = new System.Drawing.Size(453, 27);
+            this.textBox_j750_summary_FTP.Size = new System.Drawing.Size(453, 23);
             this.textBox_j750_summary_FTP.TabIndex = 7;
             // 
             // textBox_barcode_backup_FTP
@@ -677,12 +704,12 @@
             this.textBox_barcode_backup_FTP.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.textBox_barcode_backup_FTP.Location = new System.Drawing.Point(17, 57);
             this.textBox_barcode_backup_FTP.Name = "textBox_barcode_backup_FTP";
-            this.textBox_barcode_backup_FTP.Size = new System.Drawing.Size(453, 27);
+            this.textBox_barcode_backup_FTP.Size = new System.Drawing.Size(453, 23);
             this.textBox_barcode_backup_FTP.TabIndex = 8;
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(463, 541);
+            this.button7.Location = new System.Drawing.Point(1119, 173);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(90, 28);
             this.button7.TabIndex = 25;
@@ -690,33 +717,48 @@
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button12
+            // groupBox8
             // 
-            this.button12.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button12.Location = new System.Drawing.Point(13, 81);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(228, 50);
-            this.button12.TabIndex = 10;
-            this.button12.Text = "STDF_CSV彙整";
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
+            this.groupBox8.Controls.Add(this.textBox_750Password);
+            this.groupBox8.Controls.Add(this.textBox_750Ftp);
+            this.groupBox8.Controls.Add(this.textBox_750Account);
+            this.groupBox8.Location = new System.Drawing.Point(12, 425);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(486, 81);
+            this.groupBox8.TabIndex = 30;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "FTP_Summary_750";
             // 
-            // button13
+            // textBox_750Ftp
             // 
-            this.button13.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button13.Location = new System.Drawing.Point(13, 137);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(228, 50);
-            this.button13.TabIndex = 11;
-            this.button13.Text = "兩份檔案彙整";
-            this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
+            this.textBox_750Ftp.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textBox_750Ftp.Location = new System.Drawing.Point(17, 18);
+            this.textBox_750Ftp.Name = "textBox_750Ftp";
+            this.textBox_750Ftp.Size = new System.Drawing.Size(453, 23);
+            this.textBox_750Ftp.TabIndex = 7;
+            // 
+            // textBox_750Account
+            // 
+            this.textBox_750Account.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textBox_750Account.Location = new System.Drawing.Point(17, 47);
+            this.textBox_750Account.Name = "textBox_750Account";
+            this.textBox_750Account.Size = new System.Drawing.Size(71, 23);
+            this.textBox_750Account.TabIndex = 26;
+            // 
+            // textBox_750Password
+            // 
+            this.textBox_750Password.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textBox_750Password.Location = new System.Drawing.Point(94, 47);
+            this.textBox_750Password.Name = "textBox_750Password";
+            this.textBox_750Password.Size = new System.Drawing.Size(71, 23);
+            this.textBox_750Password.TabIndex = 27;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(529, 282);
+            this.ClientSize = new System.Drawing.Size(524, 280);
+            this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
@@ -752,6 +794,8 @@
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -816,6 +860,10 @@
         private System.Windows.Forms.Label HandlerLog_label;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.TextBox textBox_750Password;
+        private System.Windows.Forms.TextBox textBox_750Ftp;
+        private System.Windows.Forms.TextBox textBox_750Account;
     }
 }
 

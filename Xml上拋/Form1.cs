@@ -63,6 +63,10 @@ namespace Xml上拋
             this.textBox_barcode_backup_FTP.Text = ini.Read("barcode_backup", "Ftp", "");
             this.textBox3.Text = ini.Read("barcode_backup", "Account", "");
             this.textBox5.Text = ini.Read("barcode_backup", "Password", "");
+
+            this.textBox_750Ftp.Text = ini.Read("FTP_Summary_750", "750Ftp", "");
+            this.textBox_750Account.Text = ini.Read("FTP_Summary_750", "750Account", "");
+            this.textBox_750Password.Text = ini.Read("FTP_Summary_750", "750Password", "");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -425,7 +429,7 @@ namespace Xml上拋
             switch (CustomID)
             {
                 case "L401/":
-                    ftp(@"ftp://172.17.6.212/SUM/" + CustomID, RunCard,"j750", "j750");
+                    ftp(textBox_750Ftp.Text + CustomID, RunCard,textBox_750Account.Text, textBox_750Password.Text);
                     break;
 
                 case "L176/":
@@ -1736,14 +1740,14 @@ namespace Xml上拋
                         LotID_3Idx = Array.FindIndex(f, s => s.Contains("LotID_3"));
                         LotID_4Idx = Array.FindIndex(f, s => s.Contains("LotID_4"));
                         LotID_5Idx = Array.FindIndex(f, s => s.Contains("LotID_5"));
-                        WaferID_checkIdx = Array.FindIndex(f, s => s.Contains("WaferID"));
+                        WaferID_checkIdx = Array.FindIndex(f, s => s.Contains("WaferID")||s.Contains("Wafer_ID"));
                         X_axisIdx = Array.FindIndex(f, s => s.Contains("X_axis"));
                         Y_axisIdx = Array.FindIndex(f, s => s.Contains("Y_axis"));
                         UUID_XYIdx = Array.FindIndex(f, s => s.Contains("UUID_XY"));
-                        UUID_ID_CRCIdx = Array.FindIndex(f, s => s.Contains("UUID_ID_CRC"));
+                        UUID_ID_CRCIdx = Array.FindIndex(f, s => s.Contains("UUID_ID_CRC")||s.Contains("UUID_WCRC"));
                         YearkIdx = Array.FindIndex(f, s => s.Contains("Year"));
                         MonthDayIdx = Array.FindIndex(f, s => s.Contains("MonthDay"));
-                        TimeIdx = Array.FindIndex(f, s => s.Contains("index_set Time"));
+                        TimeIdx = Array.FindIndex(f, s => s.Contains("index_set Time")||s.Contains("Time_check Time"));
                     }
 
                     if (!f[0].Contains("PID"))
