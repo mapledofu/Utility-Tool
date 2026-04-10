@@ -86,9 +86,12 @@
             this.textBox_barcode_backup_FTP = new System.Windows.Forms.TextBox();
             this.button7 = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.textBox_750Password = new System.Windows.Forms.TextBox();
             this.textBox_750Ftp = new System.Windows.Forms.TextBox();
             this.textBox_750Account = new System.Windows.Forms.TextBox();
-            this.textBox_750Password = new System.Windows.Forms.TextBox();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.FT_Plateform_comboBox = new System.Windows.Forms.ComboBox();
+            this.SumDownload_label = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -103,6 +106,7 @@
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox8.SuspendLayout();
+            this.groupBox9.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -157,7 +161,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox2.Location = new System.Drawing.Point(504, 310);
+            this.textBox2.Location = new System.Drawing.Point(17, 51);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(71, 23);
             this.textBox2.TabIndex = 7;
@@ -165,7 +169,7 @@
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox3.Location = new System.Drawing.Point(504, 349);
+            this.textBox3.Location = new System.Drawing.Point(17, 133);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(71, 23);
             this.textBox3.TabIndex = 8;
@@ -173,7 +177,7 @@
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox4.Location = new System.Drawing.Point(581, 310);
+            this.textBox4.Location = new System.Drawing.Point(94, 51);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(109, 23);
             this.textBox4.TabIndex = 9;
@@ -181,7 +185,7 @@
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox5.Location = new System.Drawing.Point(581, 349);
+            this.textBox5.Location = new System.Drawing.Point(94, 133);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(109, 23);
             this.textBox5.TabIndex = 10;
@@ -190,7 +194,7 @@
             // 
             this.groupBox1.Controls.Add(this.textBox6);
             this.groupBox1.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.groupBox1.Location = new System.Drawing.Point(668, 143);
+            this.groupBox1.Location = new System.Drawing.Point(581, 448);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(179, 82);
             this.groupBox1.TabIndex = 12;
@@ -319,6 +323,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.SumDownload_label);
+            this.tabPage2.Controls.Add(this.groupBox9);
             this.tabPage2.Controls.Add(this.button4);
             this.tabPage2.Controls.Add(this.button3);
             this.tabPage2.Controls.Add(this.groupBox3);
@@ -333,9 +339,9 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(156, 117);
+            this.button4.Location = new System.Drawing.Point(294, 71);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(133, 55);
+            this.button4.Size = new System.Drawing.Size(197, 55);
             this.button4.TabIndex = 13;
             this.button4.Text = "程式所在位置";
             this.button4.UseVisualStyleBackColor = true;
@@ -344,10 +350,10 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button3.Location = new System.Drawing.Point(5, 117);
+            this.button3.Location = new System.Drawing.Point(293, 11);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(146, 55);
+            this.button3.Size = new System.Drawing.Size(198, 55);
             this.button3.TabIndex = 12;
             this.button3.Text = "Download FTP File";
             this.button3.UseVisualStyleBackColor = true;
@@ -655,7 +661,7 @@
             // 
             this.groupBox4.Controls.Add(this.textBox_j750_summary);
             this.groupBox4.Controls.Add(this.textBox_barcode_backup);
-            this.groupBox4.Location = new System.Drawing.Point(668, 38);
+            this.groupBox4.Location = new System.Drawing.Point(581, 333);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(486, 99);
             this.groupBox4.TabIndex = 23;
@@ -684,9 +690,13 @@
             // 
             this.groupBox5.Controls.Add(this.textBox_j750_summary_FTP);
             this.groupBox5.Controls.Add(this.textBox_barcode_backup_FTP);
-            this.groupBox5.Location = new System.Drawing.Point(12, 301);
+            this.groupBox5.Controls.Add(this.textBox4);
+            this.groupBox5.Controls.Add(this.textBox2);
+            this.groupBox5.Controls.Add(this.textBox5);
+            this.groupBox5.Controls.Add(this.textBox3);
+            this.groupBox5.Location = new System.Drawing.Point(581, 12);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(486, 99);
+            this.groupBox5.Size = new System.Drawing.Size(480, 174);
             this.groupBox5.TabIndex = 24;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "FTP";
@@ -702,14 +712,14 @@
             // textBox_barcode_backup_FTP
             // 
             this.textBox_barcode_backup_FTP.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox_barcode_backup_FTP.Location = new System.Drawing.Point(17, 57);
+            this.textBox_barcode_backup_FTP.Location = new System.Drawing.Point(17, 91);
             this.textBox_barcode_backup_FTP.Name = "textBox_barcode_backup_FTP";
             this.textBox_barcode_backup_FTP.Size = new System.Drawing.Size(453, 23);
             this.textBox_barcode_backup_FTP.TabIndex = 8;
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(1119, 173);
+            this.button7.Location = new System.Drawing.Point(1156, 547);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(90, 28);
             this.button7.TabIndex = 25;
@@ -722,17 +732,25 @@
             this.groupBox8.Controls.Add(this.textBox_750Password);
             this.groupBox8.Controls.Add(this.textBox_750Ftp);
             this.groupBox8.Controls.Add(this.textBox_750Account);
-            this.groupBox8.Location = new System.Drawing.Point(12, 425);
+            this.groupBox8.Location = new System.Drawing.Point(581, 202);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(486, 81);
+            this.groupBox8.Size = new System.Drawing.Size(480, 109);
             this.groupBox8.TabIndex = 30;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "FTP_Summary_750";
             // 
+            // textBox_750Password
+            // 
+            this.textBox_750Password.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textBox_750Password.Location = new System.Drawing.Point(94, 62);
+            this.textBox_750Password.Name = "textBox_750Password";
+            this.textBox_750Password.Size = new System.Drawing.Size(71, 23);
+            this.textBox_750Password.TabIndex = 27;
+            // 
             // textBox_750Ftp
             // 
             this.textBox_750Ftp.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox_750Ftp.Location = new System.Drawing.Point(17, 18);
+            this.textBox_750Ftp.Location = new System.Drawing.Point(17, 29);
             this.textBox_750Ftp.Name = "textBox_750Ftp";
             this.textBox_750Ftp.Size = new System.Drawing.Size(453, 23);
             this.textBox_750Ftp.TabIndex = 7;
@@ -740,33 +758,57 @@
             // textBox_750Account
             // 
             this.textBox_750Account.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox_750Account.Location = new System.Drawing.Point(17, 47);
+            this.textBox_750Account.Location = new System.Drawing.Point(17, 62);
             this.textBox_750Account.Name = "textBox_750Account";
             this.textBox_750Account.Size = new System.Drawing.Size(71, 23);
             this.textBox_750Account.TabIndex = 26;
             // 
-            // textBox_750Password
+            // groupBox9
             // 
-            this.textBox_750Password.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox_750Password.Location = new System.Drawing.Point(94, 47);
-            this.textBox_750Password.Name = "textBox_750Password";
-            this.textBox_750Password.Size = new System.Drawing.Size(71, 23);
-            this.textBox_750Password.TabIndex = 27;
+            this.groupBox9.Controls.Add(this.FT_Plateform_comboBox);
+            this.groupBox9.Font = new System.Drawing.Font("微軟正黑體", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.groupBox9.Location = new System.Drawing.Point(5, 126);
+            this.groupBox9.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox9.Size = new System.Drawing.Size(284, 53);
+            this.groupBox9.TabIndex = 11;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "測試平台";
+            // 
+            // FT_Plateform_comboBox
+            // 
+            this.FT_Plateform_comboBox.FormattingEnabled = true;
+            this.FT_Plateform_comboBox.Items.AddRange(new object[] {
+            "J750",
+            "D10",
+            "DX"});
+            this.FT_Plateform_comboBox.Location = new System.Drawing.Point(5, 21);
+            this.FT_Plateform_comboBox.Name = "FT_Plateform_comboBox";
+            this.FT_Plateform_comboBox.Size = new System.Drawing.Size(121, 27);
+            this.FT_Plateform_comboBox.TabIndex = 2;
+            this.FT_Plateform_comboBox.Text = "J750";
+            // 
+            // SumDownload_label
+            // 
+            this.SumDownload_label.AutoSize = true;
+            this.SumDownload_label.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.SumDownload_label.Location = new System.Drawing.Point(7, 181);
+            this.SumDownload_label.Name = "SumDownload_label";
+            this.SumDownload_label.Size = new System.Drawing.Size(43, 16);
+            this.SumDownload_label.TabIndex = 14;
+            this.SumDownload_label.Text = "狀態欄";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(524, 280);
+            this.ClientSize = new System.Drawing.Size(525, 284);
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Name = "Form1";
@@ -778,6 +820,7 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -796,8 +839,8 @@
             this.groupBox5.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -864,6 +907,9 @@
         private System.Windows.Forms.TextBox textBox_750Password;
         private System.Windows.Forms.TextBox textBox_750Ftp;
         private System.Windows.Forms.TextBox textBox_750Account;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.ComboBox FT_Plateform_comboBox;
+        private System.Windows.Forms.Label SumDownload_label;
     }
 }
 

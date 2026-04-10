@@ -333,50 +333,57 @@ namespace Xml上拋
                 string FTP_Data_Download_Address = "";
                 string zipfilename = "";
 
-                //var baseUrl = "ftp://172.17.3.28/%2Fusr/local/home/vol4/D10/prod/autoResult/summary/";
-                //var baseUri = new Uri(baseUrl);
-                //var basePath = Uri.UnescapeDataString(baseUri.AbsolutePath);    // "/usr/local/.../summary/"
-                //if (!basePath.EndsWith("/")) basePath += "/";
-                //var fullPath = basePath + "L176/";                              // "/usr/local/.../summary/L176/"
-                //var newUri = new Uri($"ftp://{baseUri.Host}{(baseUri.IsDefaultPort ? "" : ":" + baseUri.Port)}{fullPath}");
+                List<string> matchedFiles = new List<string>();
 
-                FtpWebRequest ftpRequest = (FtpWebRequest)WebRequest.Create(ftpaddress);
-                ftpRequest.Credentials = new NetworkCredential(FtpAccount, FtpPassword);
+                string pattern =
+                    $"{RunCard}_*_{FT_Station_comboBox.Text}*";
 
-                ftpRequest.Method = WebRequestMethods.Ftp.ListDirectory; // NLST，比 LIST 更簡單
-                ftpRequest.UsePassive = true;
-                ftpRequest.UseBinary = true;
-                ftpRequest.KeepAlive = false;
-                ftpRequest.Timeout = 8000;
-                ftpRequest.ReadWriteTimeout = 20000;
+                string uri = $"{ftpaddress}/{pattern}";
 
-                FtpWebResponse response = (FtpWebResponse)ftpRequest.GetResponse();
-                StreamReader streamReader = new StreamReader(response.GetResponseStream());
+                var request = (FtpWebRequest)WebRequest.Create(uri);
+                request.Credentials = new NetworkCredential(FtpAccount, FtpPassword);
+                request.Method = WebRequestMethods.Ftp.ListDirectory;
+                request.UsePassive = true;
+                request.UseBinary = true;
+                request.KeepAlive = false;
+                request.Timeout = 80000;
+                request.ReadWriteTimeout = 80000;
 
-                List<string> directories = new List<string>();//FTP紀錄需要下載的檔案名稱
-
-                string line = streamReader.ReadLine();
-                while (!string.IsNullOrEmpty(line))
+                using (var response = (FtpWebResponse)request.GetResponse())
+                using (var reader = new StreamReader(response.GetResponseStream()))
                 {
-                    var lineSplit = line.Split('_');
-                    if (lineSplit[0] == RunCard && line.Contains(FT_Station_comboBox.Text) && !line.Contains("CORR") && !line.Contains("HW"))
+                    string line;
+                    while ((line = reader.ReadLine()) != null)
                     {
-                        directories.Add(line);
-                        var temp = line.Split('_');
-                        zipfilename = $"{temp[0]}_{temp[1]}_{FT_Station_comboBox.Text}_Summary.zip";
+                        if (!line.Contains("CORR") && !line.Contains("HW"))
+                        {
+                            matchedFiles.Add(line);
+
+                            if (string.IsNullOrEmpty(zipfilename))
+                            {
+                                var parts = line.Split('_');
+                                zipfilename =
+                                    $"{parts[0]}_{parts[1]}_{FT_Station_comboBox.Text}_Summary.zip";
+                            }
+                        }
                     }
-                    line = streamReader.ReadLine();
                 }
-                streamReader.Close();
+
+                if (matchedFiles.Count == 0)
+                {
+                    MessageBox.Show("找不到符合條件的檔案");
+                    return;
+                }
+
                 string LocalAdress = System.Environment.CurrentDirectory + "\\" + RN_textBox.Text + "\\";
-                if (directories.Count() != 0)
+                if (matchedFiles.Count() != 0)
                 {
                     int i = 0;
                     
                     CreateFolder(LocalAdress);
                     FTP_Data_Download_Address = LocalAdress+"\\";
 
-                    foreach (var e in directories)
+                    foreach (var e in matchedFiles)
                     {
                         //FTP下載檔案
                         DownloadFile(ftpaddress, LocalAdress, e, FtpAccount, FtpPassword);
@@ -423,25 +430,38 @@ namespace Xml上拋
             string CustomID;
             string RunCard;
 
+            SumDownload_label.Text = ("");
+            SumDownload_label.Refresh();
+            if (RN_textBox.Text == "") 
+            {
+                MessageBox.Show("請勿輸入空值");
+                return; 
+            }
+            SumDownload_label.Text = ("下載中");
+            SumDownload_label.Refresh();
+
             CustomID = RN_textBox.Text.Substring(1, 4) + "/";
             RunCard = RN_textBox.Text;
 
-            switch (CustomID)
+
+            switch (FT_Plateform_comboBox.Text)
             {
-                case "L401/":
+                case "J750":
                     ftp(textBox_750Ftp.Text + CustomID, RunCard,textBox_750Account.Text, textBox_750Password.Text);
+                    SumDownload_label.Text = ("Done");
+                    SumDownload_label.Refresh();
                     break;
 
-                case "L176/":
+                case "D10":
                     ftp(@"ftp://172.17.3.28/%2Fusr/local/home/vol4/D10/prod/autoResult/summary/" + CustomID, RunCard, "eng", "eng1812");
-
-                    //DownloadAndZipWithFluentFtp(@"ftp://172.17.3.28/%2Fusr/local/home/vol4/D10/prod/autoResult/summary/" + CustomID, RunCard, RunCard, "eng", "eng1812");
+                    SumDownload_label.Text = ("Done");
+                    SumDownload_label.Refresh();
                     break;
 
                 default:
+                    MessageBox.Show("無此平台尚未新增");
                     break;
             }
-
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -1586,7 +1606,7 @@ namespace Xml上拋
                 HandlerLog_label.Refresh();
 
                 string file_ext = Path.GetExtension(file);
-                if (!file_ext.Equals(".csv", StringComparison.OrdinalIgnoreCase) || file.Contains("Sorted"))
+                if (!file_ext.Equals(".csv", StringComparison.OrdinalIgnoreCase) || file.Contains("Sorted") || file.Contains(".txt"))
                     continue;
 
                 csvText = File.ReadAllText(file);
@@ -1782,7 +1802,6 @@ namespace Xml上拋
             }
         }
 
-
         public static class CsvWriter
         {
             // 需要保證欄位中有逗號或引號時，能正確以雙引號包裹並將內部引號轉義為 ""
@@ -1857,7 +1876,6 @@ namespace Xml上拋
             }
         }
 
-
         private void button12_Click(object sender, EventArgs e)
         {
             string root = Environment.CurrentDirectory;
@@ -1889,7 +1907,7 @@ namespace Xml上拋
                 HandlerLog_label.Refresh();
 
                 string file_ext = Path.GetExtension(file);
-                if (!file_ext.Equals(".csv", StringComparison.OrdinalIgnoreCase) || file.Contains("Sorted"))
+                if (!file_ext.Equals(".csv", StringComparison.OrdinalIgnoreCase) || file.Contains("Sorted") || file.Contains(""))
                     continue;
 
                 csvText = File.ReadAllText(file);
